@@ -2,3 +2,5 @@
 <h1>"Dentetsu"</h1>
 <h3>Created by:</h3><p>Ryan Ho & Shaoxuan Zhuang</p>
 <hr>
+<h3>About:</h3>
+<p>This project was created on behalf of the State Leadership Conference (SLC) for FBLA. Together, Shaoxuan and I have created a full-stack web application that simulates a Japanese eatery. This application was made possible by using HTML, CSS, JavaScript, Bootstrap, Python3, Django, and other resources.</p>
