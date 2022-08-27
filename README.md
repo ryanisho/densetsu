@@ -13,6 +13,7 @@ Densetsu is a Japanese based restaurant located in New York City, on Pier 17. Cr
 * python
 * django
 * twilio
+* sqlite
 
 ## Authors
 
