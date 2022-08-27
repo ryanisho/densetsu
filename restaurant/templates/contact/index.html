@@ -1,0 +1,134 @@
+<title>Contact Us | Densetsu NYC</title>
+{% extends "base/base.html" %}
+
+{% block content %}
+      <!-- Title Page -->
+      <section class="bg-title-page flex-c-m p-t-160 p-b-80 p-l-15 p-r-15" style="background-image: url(/static/images/contact.jpeg);">
+         <h2 class="tit6 t-center">
+            Contact
+         </h2>
+      </section>
+
+      <section class="section-contact p-t-90 p-b-50">
+         <div class="container">
+           <div class = "row">
+
+           {% for message in messages %}
+   			<div class="container-fluid p-0">
+   			  <div class="alert {{ message.tags }} alert-dismissible" role="alert" >
+   			    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+   			      <span aria-hidden="True">&times;</span>
+   			    </button>
+   			    {{ message }}
+   			  </div>
+   			</div>
+   			{% endfor %}
+
+           <div class = "col-md-7">
+           <center>
+             <form method = "POST" class="wrap-form-reservation size22">
+                {% csrf_token %}
+					    <h3 class="tit7 t-left p-b-62 p-t-105">
+	                  Send us a Message
+	               </h3>
+                  <div class="row">
+                     <div class="col-md-4">
+                        <!-- Name -->
+                        <span class="txt9">
+                        Name
+                        </span>
+                        <div class="wrap-inputname size12 bo2 bo-rad-10 m-t-3 m-b-23">
+                           <input class="bo-rad-10 sizefull txt10 p-l-20" type="text" name="name" placeholder="Name">
+                        </div>
+                     </div>
+                     <div class="col-md-4">
+                        <!-- Email -->
+                        <span class="txt9">
+                        Email
+                        </span>
+                        <div class="wrap-inputemail size12 bo2 bo-rad-10 m-t-3 m-b-23">
+                           <input class="bo-rad-10 sizefull txt10 p-l-20" type="text" name="email" placeholder="Email">
+                        </div>
+                     </div>
+                     <div class="col-md-4">
+                        <!-- Phone -->
+                        <span class="txt9">
+                        Phone
+                        </span>
+                        <div class="wrap-inputphone size12 bo2 bo-rad-10 m-t-3 m-b-23">
+                           <input class="bo-rad-10 sizefull txt10 p-l-20" type="text" name="phone" placeholder="Phone">
+                        </div>
+                     </div>
+                     <div class="col-12">
+                        <!-- Message -->
+                        <span class="txt9">
+                        Message
+                        </span>
+                        <textarea class="bo-rad-10 size35 bo2 txt10 p-l-20 p-t-15 m-b-10 m-t-3" name="message" placeholder="Message"></textarea>
+                     </div>
+                  </div>
+                  <div class="wrap-btn-booking flex-c-m m-t-13">
+                     <!-- Button3 -->
+                     <button type="submit" class="btn3 flex-c-m size36 txt11 trans-0-4">
+                     Submit
+                     </button>
+                  </div>
+            </form>
+          </center>
+        </div>
+
+        <div class = "col-lg-5 p-t-200">
+            <iframe width="100%" height="100%" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.5651841942026!2d-74.00300433227731!3d40.705573000000015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a3c45535a47%3A0x526a3f74e5173acb!2sPier%2017!5e0!3m2!1sen!2sus!4v1646705347371!5m2!1sen!2sus" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" fullscreen></iframe><br>
+        </div>
+      </div>
+
+            <div class="row p-t-135">
+               <div class="col-sm-8 col-md-4 col-lg-4 m-l-r-auto p-t-30">
+                  <div class="dis-flex m-l-23">
+                     <div class="p-r-40 p-t-6">
+                        <img src="/static/images/icons/map-icon.png" alt="IMG-ICON">
+                     </div>
+                     <div class="flex-col-l">
+                        <span class="txt5 p-b-10">
+                        Location
+                        </span>
+                        <span class="txt23 size38">
+                        89 South St, New York, NY 10038
+                        </span>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-sm-8 col-md-3 col-lg-4 m-l-r-auto p-t-30">
+                  <div class="dis-flex m-l-23">
+                     <div class="p-r-40 p-t-6">
+                        <img src="/static/images/icons/phone-icon.png" alt="IMG-ICON">
+                     </div>
+                     <div class="flex-col-l">
+                        <span class="txt5 p-b-10">
+                        Call Us
+                        </span>
+                        <span class="txt23 size38">
+                        (760) 309-3706
+                        </span>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-sm-8 col-md-5 col-lg-4 m-l-r-auto p-t-30">
+                  <div class="dis-flex m-l-23">
+                     <div class="p-r-40 p-t-6">
+                        <img src="/static/images/icons/clock-icon.png" alt="IMG-ICON">
+                     </div>
+                     <div class="flex-col-l">
+                        <span class="txt5 p-b-10">
+                        Opening Hours
+                        </span>
+                        <span class="txt23 size38">
+                        11:00 AM – 10:00 PM <br/>Monday - Sunday
+                        </span>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+{% endblock content %}

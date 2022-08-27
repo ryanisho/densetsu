@@ -1,0 +1,205 @@
+<title>Menu | Densetsu NYC</title>
+{% extends "base/base.html" %}
+
+{% block content %}
+
+<section class="bg-title-page flex-c-m p-t-160 p-b-80 p-l-15 p-r-15" style=background-image:url(/static/images/menuheader.jpeg)>
+	<h2 class="tit6 t-center">
+		Menu
+	</h2>
+</section>
+<section class="section-mainmenu p-t-110 p-b-70 bg1-pattern">
+   <div class=container>
+   <br>
+   <div class=row>
+   <div id=dimsum class="col-md-10 col-lg-6 p-l-35 p-l-15-lg m-l-r-auto">
+      <div class="wrap-item-mainmenu p-b-22">
+         <h3 class="tit-mainmenu tit10">
+            Dim Sum
+         </h3>
+         <hr style=background-color:black>
+         {% for item in dimsum_items %}
+         <div class=row>
+            <div class=col-8>
+               <a class="txt21 m-b-3">
+               {{ item.title }}
+               </a>
+               <span class="txt23 flex-col-l-m">
+               {{ item.description }}
+               </span>
+            </div>
+            <div class=col-4 style="text-align: right;">
+               <span class="txt22 m-t-20">
+               ${{ item.price }}
+               </span>
+            </div>
+         </div>
+         <br>
+         {% endfor %}
+      </div>
+   </div>
+   <div id=appetizers class="col-md-10 col-lg-6 p-l-35 p-l-15-lg m-l-r-auto">
+      <div class="wrap-item-mainmenu p-b-22">
+         <h3 class="tit-mainmenu tit10">
+            Appetizers
+         </h3>
+         <hr style=background-color:black>
+         {% for item in appetizer_items %}
+         <div class=row>
+            <div class=col-8>
+               <a class="txt21 m-b-3">
+               {{ item.title }}
+               </a>
+               <span class="txt23 flex-col-l-m">
+               {{ item.description }}
+               </span>
+            </div>
+            <div class=col-4 style="text-align: right;">
+               <span class="txt22 m-t-20">
+               ${{ item.price }}
+               </span>
+            </div>
+         </div>
+         <br>
+         {% endfor %}
+         <br>
+      </div>
+   </div>
+   <div id=baos class="col-md-10 col-lg-6 p-l-35 p-l-15-lg m-l-r-auto">
+      <div class="wrap-item-mainmenu p-b-22">
+         <h3 class="tit-mainmenu tit10">
+            Baos
+         </h3>
+         <hr style=background-color:black>
+            {% for item in bao_items %}
+         <div class=row>
+            <div class=col-8>
+               <a class="txt21 m-b-3">
+               {{ item.title }}
+               </a>
+               <span class="txt23 flex-col-l-m">
+               {{ item.description }}
+               </span>
+            </div>
+            <div class=col-4 style="text-align: right;">
+               <span class="txt22 m-t-20">
+               ${{ item.price }}
+               </span>
+            </div>
+         </div>
+         <br>
+         {% endfor %}
+      </div>
+   </div>
+   <div id=nsoups class="col-md-10 col-lg-6 p-l-35 p-l-15-lg m-l-r-auto">
+      <div class="wrap-item-mainmenu p-b-22">
+         <h3 class="tit-mainmenu tit10">
+            Noodle Soups
+         </h3>
+         <hr style=background-color:black>
+         {% for item in noodleSoup_items %}
+         <div class=row>
+            <div class=col-8>
+               <a class="txt21 m-b-3">
+               {{ item.title }}
+               </a>
+               <span class="txt23 flex-col-l-m">
+               {{ item.description }}
+               </span>
+            </div>
+            <div class=col-4 style="text-align: right;">
+               <span class="txt22 m-t-20">
+               ${{ item.price }}
+               </span>
+            </div>
+         </div>
+         <br>
+         {% endfor %}
+      </div>
+   </div>
+   <div id=sushi class="col-md-10 col-lg-6 p-l-35 p-l-15-lg m-l-r-auto">
+      <div class="wrap-item-mainmenu p-b-22">
+         <h3 class="tit-mainmenu tit10">
+            Sushi
+         </h3>
+         <hr style=background-color:black>
+         {% for item in sushi_items %}
+         <div class=row>
+            <div class=col-8>
+               <a class="txt21 m-b-3">
+               {{ item.title }}
+               </a>
+               <span class="txt23 flex-col-l-m">
+               {{ item.description }}
+               </span>
+            </div>
+            <div class=col-4 style="text-align: right;">
+               <span class="txt22 m-t-20">
+               ${{ item.price }}
+               </span>
+            </div>
+         </div>
+         <br>
+         {% endfor %}
+      </div>
+   </div>
+   <div id=dessert class="col-md-10 col-lg-6 p-l-35 p-l-15-lg m-l-r-auto">
+      <div class="wrap-item-mainmenu p-b-22">
+         <h3 class="tit-mainmenu tit10">
+            Desserts
+         </h3>
+         <hr style=background-color:black>
+         {% for item in dessert_items %}
+         <div class=row>
+            <div class=col-8>
+               <a class="txt21 m-b-3">
+               {{ item.title }}
+               </a>
+               <span class="txt23 flex-col-l-m">
+               {{ item.description }}
+               </span>
+            </div>
+            <div class=col-4 style="text-align: right;">
+               <span class="txt22 m-t-20">
+               ${{ item.price }}
+               </span>
+            </div>
+         </div>
+         <br>
+         {% endfor %}
+         <div id=dessert>
+            <div class="wrap-item-mainmenu p-b-22">
+               <h3 class="tit-mainmenu tit10">
+                  Drinks
+               </h3>
+               <hr style=background-color:black>
+               {% for item in drink_items %}
+               <div class=row>
+                  <div class=col-8>
+                     <a class="txt21 m-b-3">
+                     {{ item.title }}
+                     </a>
+                     <span class="txt23 flex-col-l-m">
+                     {{ item.description }}
+                     </span>
+                  </div>
+                  <div class=col-4 style="text-align: right;">
+                     <span class="txt22 m-t-20">
+                     ${{ item.price }}
+                     </span>
+                  </div>
+               </div>
+               <br>
+               {% endfor %}
+            </div>
+         </div>
+         </div>
+         <br>
+      </div>
+   </div>
+   <strong>
+      <p>*Consuming raw or undercooked meats, poultry, seafood, shellfish, eggs or unpasteurized milk may increase your risk of foodborne illness.</p>
+   </strong>
+</section>
+
+{% endblock content %}

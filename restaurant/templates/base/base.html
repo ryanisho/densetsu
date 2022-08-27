@@ -1,0 +1,326 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="{% static 'images/icons/favicon.png' %}" />
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'fonts/themify/themify-icons.css' %}">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/animate/animate.css' %}">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/css-hamburgers/hamburgers.min.css' %}">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/animsition/css/animsition.min.css' %}">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/select2/select2.min.css' %}">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/daterangepicker/daterangepicker.css' %}">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/slick/slick.css' %}">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/lightbox2/css/lightbox.min.css' %}">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'css/util.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+	<!--===============================================================================================-->
+</head>
+
+<body class="animsition">
+
+	<!-- Header -->
+	<header>
+		<!-- Header desktop -->
+		<div class="wrap-menu-header gradient1 trans-0-4">
+			<div class="container h-full">
+				<div class="wrap_header trans-0-3">
+					<!-- Logo -->
+					<span class="tit2 t-center">
+					</span>
+					<!-- Social Media -->
+					<div class="wrap_menu social flex-w flex-l-m p-r-20">
+						<a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+						<a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><i class="fa fa-instagram m-l-21" aria-hidden="true"></i></a>
+					</div>
+					<div class="wrap_menu p-l-45 p-l-0-xl">
+						<nav class="menu">
+							<ul class="main_menu">
+								<li>
+									<a href="{%  url 'densetsu-home' %}">Home</a>
+								</li>
+								<li>
+									<a href="{%  url 'densetsu-about' %}">About</a>
+								</li>
+								<li>
+									<a href="{%  url 'densetsu-menu' %}">Menu</a>
+								</li>
+								<!-- Logo -->
+								<a class="tit2 t-center" style="padding: 10px;">
+									Densetsu
+								</a>
+								<!-- Menu -->
+								<li>
+									<a href="{%  url 'densetsu-reservations' %}">Reservations</a>
+								</li>
+								<li>
+									<a href="{%  url 'densetsu-gallery' %}">Gallery</a>
+								</li>
+								<li>
+									<a href="{%  url 'densetsu-contact' %}">Contact</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+
+					<!-- Social -->
+					<button class="btn-show-sidebar m-l-33 trans-0-4"></button>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<!-- Sidebar -->
+	<aside class="sidebar trans-0-4">
+		<!-- Button Hide sidebar -->
+		<button class="btn-hide-sidebar ti-close color0-hov trans-0-4"></button>
+
+		<ul class="menu-sidebar p-t-95 p-b-70">
+			<li class="t-center m-b-13">
+				<a class="tit2 t-center" style="padding: 10px;">
+					Densetsu
+				</a>
+			</li>
+			<li class="t-center m-b-13">
+				<a href="{%  url 'densetsu-home' %}" class="txt19">Home</a>
+			</li>
+			<li class="t-center m-b-13">
+				<a href="{%  url 'densetsu-about' %}" class="txt19">About</a>
+			</li>
+			<li class="t-center m-b-13">
+				<a href="{%  url 'densetsu-menu' %}" class="txt19">Menu</a>
+			</li>
+			<li class="t-center m-b-13">
+				<a href="{%  url 'densetsu-gallery' %}" class="txt19">Gallery</a>
+			</li>
+			<li class="t-center m-b-13">
+				<a href="{%  url 'densetsu-contact' %}" class="txt19">Contact</a>
+			</li>
+			<li class="t-center m-b-33">
+				<!-- Button3 -->
+				<a href = "{%  url 'densetsu-reservations' %}" class="btn3 flex-c-m size13 txt11 trans-0-4 m-l-r-auto">
+					<span style="color: white;">Reservations</span>
+				</a>
+			</li>
+
+			<li class="t-center">
+				<a href="https://www.facebook.com/densetsunyc" target="_blank" rel="noopener noreferrer"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+				<a href="https://www.instagram.com/densetsunyc" target="_blank" rel="noopener noreferrer"><i class="fa fa-instagram m-l-21" aria-hidden="true"></i></a>
+			</li>
+		</ul>
+	</aside>
+
+	{% block content %}
+	{% endblock%}
+
+	<!-- Sign up -->
+	<div class="section-signup bg1-pattern p-t-85 p-b-85">
+		<form class="flex-c-m flex-w flex-col-c-m-lg p-l-5 p-r-5">
+			<span class="txt5 m-10">
+				Specials Sign up
+			</span>
+
+			<div class="wrap-input-signup size17 bo2 bo-rad-10 bgwhite pos-relative txt10 m-10">
+				<input class="bo-rad-10 sizefull txt10 p-l-20" type="text" name="email-address" placeholder="Email Address">
+				<i class="fa fa-envelope ab-r-m m-r-18" aria-hidden="true"></i>
+			</div>
+
+			<!-- Button3 -->
+			<button type="submit" class="btn3 flex-c-m size18 txt11 trans-0-4 m-10">
+				Sign-up
+			</button>
+		</form>
+	</div>
+
+    <!-- Footer -->
+	<footer class="bg1">
+		<div class="container p-t-40 p-b-70">
+			<div class="row">
+				<div class="col-sm-6 col-md-4 p-t-50">
+					<!-- - -->
+					<h4 class="txt13 m-b-33">
+						Contact Us
+					</h4>
+
+					<ul class="m-b-35">
+						<li class="txt14 m-b-14">
+							<i class="fa fa-map-marker fs-16 dis-inline-block size19" aria-hidden="true"></i>
+							89 South St, New York, NY 10038
+						</li>
+
+						<li class="txt14 m-b-14">
+							<i class="fa fa-phone fs-16 dis-inline-block size19" aria-hidden="true"></i>
+							+1 (760) 309-3706
+						</li>
+
+						<li class="txt14 m-b-14">
+							<i class="fa fa-envelope fs-13 dis-inline-block size19" aria-hidden="true"></i>
+							contact@densetsu.com
+						</li>
+					</ul>
+
+					<!-- - -->
+					<h4 class="txt13 m-b-32">
+						Opening Times
+					</h4>
+
+					<ul class = "m-b-35">
+						<li class="txt14">
+							11:00 AM – 10:00 PM
+						</li>
+
+						<li class="txt14">
+							Monday - Sunday
+						</li>
+					</ul>
+
+					<h4 class="txt13 m-b-32">
+						Links
+					</h4>
+
+					<ul>
+						<li class="txt14">
+							<a href = "{%  url 'densetsu-copyright' %}">Citations and Disclaimers</a>
+						</li>
+
+						<li class="txt14">
+							<a href = "/admin" target="_blank" rel="noopener noreferrer">Administration</a>
+						</li>
+					</ul>
+
+				</div>
+
+				<div class="col-sm-6 col-md-4 p-t-50">
+					<h4 class="txt13 m-b-33">
+						Latest Reviews
+					</h4>
+
+					<div class="m-b-25">
+						<span class="fs-13 color2 m-r-5">
+							<i class="fa fa-twitter" aria-hidden="true"></i>
+						</span>
+						<a href="#" class="txt15">
+							@zoeychen
+						</a>
+
+						<p class="txt14 m-b-18">
+							"Highly recommend coming with a group and eating family style."
+							<br>
+							<a href="#" class="txt15">
+								https://buff.ly/4paSmGT
+							</a>
+						</p>
+
+						<span class="txt16">
+							March 1 2022
+						</span>
+					</div>
+
+					<div>
+						<span class="fs-13 color2 m-r-5">
+							<i class="fa fa-twitter" aria-hidden="true"></i>
+						</span>
+						<a href="#" class="txt15">
+							@demilu
+						</a>
+
+						<p class="txt14 m-b-18">
+							Totally blown away by Densetsu last night. The food and staff were amazing… everything was completely in point. Highly recommend coming with a group and eating family style. Making this a regular spot!
+							<a href="#" class="txt15">
+								https://buff.ly/2zaSfAQ
+							</a>
+						</p>
+
+						<span class="txt16">
+							Feb 27 2022
+						</span>
+					</div>
+				</div>
+
+				<div class="col-sm-6 col-md-4 p-t-50">
+					<!-- - -->
+					<h4 class="txt13 m-b-38">
+						Location
+					</h4>
+
+					<!-- Location footer -->
+					<div class="wrap-gallery-footer flex-w">
+						<iframe width="500" height="300" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.5651841942026!2d-74.00300433227731!3d40.705573000000015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a3c45535a47%3A0x526a3f74e5173acb!2sPier%2017!5e0!3m2!1sen!2sus!4v1646705347371!5m2!1sen!2sus" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" fullscreen></iframe>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<div class="end-footer bg2">
+			<div class="container">
+				<div class="flex-sb-m flex-w p-t-22 p-b-22">
+					<div class="p-t-5 p-b-5">
+						<a href="https://www.instagram.com/" class="fs-15 c-white" target="_blank" rel="noopener noreferrer"><i class="fa fa-instagram" aria-hidden="true" ></i></a>
+						<a href="https://www.facebook.com/" class="fs-15 c-white" target="_blank" rel="noopener noreferrer"><i class="fa fa-facebook m-l-18" aria-hidden="true"></i></a>
+					</div>
+
+					<div class="txt17 p-r-20 p-t-5 p-b-5">
+						Copyright &copy; 2022 Densetsu - All Rights Reserved.
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+	<!-- Back to top -->
+	<div class="btn-back-to-top bg0-hov" id="myBtn">
+		<span class="symbol-btn-back-to-top">
+			<i class="fa fa-angle-double-up" aria-hidden="true"></i>
+		</span>
+	</div>
+
+	<!-- Container Selection1 -->
+	<div id="dropDownSelect1"></div>
+
+<!--===============================================================================================-->
+	<script type="text/javascript" src="{% static 'vendor/jquery/jquery-3.2.1.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script type="text/javascript" src="{% static 'vendor/animsition/js/animsition.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script type="text/javascript" src="{% static 'vendor/bootstrap/js/popper.js' %}"></script>
+	<script type="text/javascript" src="{% static 'vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script type="text/javascript" src="{% static 'vendor/select2/select2.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script type="text/javascript" src="{% static 'vendor/daterangepicker/moment.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'vendor/daterangepicker/daterangepicker.js' %}"></script>
+<!--===============================================================================================-->
+	<script type="text/javascript" src="{% static 'vendor/slick/slick.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/slick-custom.js' %}"></script>
+<!--===============================================================================================-->
+	<script type="text/javascript" src="{% static 'vendor/parallax100/parallax100.js' %}"></script>
+	<script type="text/javascript">
+        $('.parallax100').parallax100();
+	</script>
+<!--===============================================================================================-->
+	<script type="text/javascript" src="{% static 'vendor/countdowntime/countdowntime.js' %}"></script>
+<!--===============================================================================================-->
+	<script type="text/javascript" src="{% static 'vendor/lightbox2/js/lightbox.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'js/main.js' %}"></script>
+	<script src="https://www.fbgcdn.com/embedder/js/ewm2.js" defer async ></script>
+
+</body>
+</html>
